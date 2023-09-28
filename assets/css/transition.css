@@ -32,5 +32,43 @@
 }
 
 .rect-3:hover {
-  transform: rotate(500deg);
+  transform: rotate(700deg);
+}
+
+.rect-4 {
+  background-color: purple;
+  transition: all 2s ease;
+  /* con all andiamo a "transizionare" TUTTO quello che cambierà all'hover */
+}
+
+.rect-4:hover {
+  width: 500px;
+  background-color: black;
+}
+
+.rect-5 {
+  background-color: magenta;
+  transition: width 3s ease, background-color 1s linear;
+  /* in questo caso abbiamo transizioni separate per le due proprietà che cambieranno all'hover */
+}
+
+.rect-5:hover {
+  width: 500px;
+  background-color: cyan;
+}
+
+/* e se volessi avere una transition diversa in entrata e uscita? */
+/* dovete DUPLICARE la transition e metterla anche nello stato di hover */
+/* occhio che adesso quella nello stato di hover sarà quella in entrata, mentre quella "normale" diventa quella in uscita */
+
+.rect-6 {
+  background-color: dimgray;
+  /* TRANSIZIONE OUT */
+  transition: width 0.5s linear;
+}
+
+.rect-6:hover {
+  width: 700px;
+  /* TRANSIZIONE IN */
+  transition: width 5s linear;
 }
