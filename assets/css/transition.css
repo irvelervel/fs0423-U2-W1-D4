@@ -1,0 +1,17 @@
+.rect {
+  width: 200px;
+  height: 150px;
+}
+
+.rect-1 {
+  background-color: chocolate;
+  /* applichiamo una transition per questo cambio di width all'hover */
+  /* le transition si applicano allo stato "normale" dell'elemento, non nel pseudo selettore hover */
+  /* si applicano con una proprietà CSS che si chiama "transition" (in realtà è una scorciatoia) */
+  /* transition: property duration timing-function delay */
+  transition: width 2s linear 0s;
+}
+
+.rect-1:hover {
+  width: 500px;
+}

@@ -1,0 +1,61 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  margin-top: 2em;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  border: 2px solid grey;
+  /* allineo perfettamente il contenuto del box con "display: flex" */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.rotate {
+  background-color: darkmagenta;
+  color: white;
+  transform: rotate(40deg);
+}
+
+.translate {
+  background-color: forestgreen;
+  color: white;
+  transform: translateX(70px) translateY(35px); /* oppure direttamente translate(70px, 35px) */
+}
+
+.skew {
+  background-color: firebrick;
+  color: white;
+  transform: skew(30deg, 10deg);
+}
+
+.scale {
+  background-color: lawngreen;
+  transform: scale(0.7);
+  /* valori minori di 1 rimpiccioliranno l'elemento rispetto alle sue dimensioni originali, valori superiori a 1
+  invece risulteranno in un ingrandimento */
+}
+
+.rotatescale {
+  background-color: darkgoldenrod;
+  color: white;
+  transform: rotate(30deg) scale(1.2);
+}
+
+/* attenzione a dividere i vostri transform su più classi, in quanto sovrascrivete la stessa proprietà CSS! */
+.class1 {
+  transform: rotate(30deg);
+}
+
+.class2 {
+  transform: scale(1.2);
+}
+
+/* in questo caso la proprietà risultante sarà solamente transform: scale(1.2) */
