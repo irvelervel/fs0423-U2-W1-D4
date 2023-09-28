@@ -1,0 +1,58 @@
+body,
+html {
+  height: 100%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+main.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cards {
+  display: flex;
+}
+
+#cards article {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 20px 30px;
+  text-align: justify;
+  color: white;
+  background-color: grey;
+  transition: all 0.5s;
+}
+
+#cards article:hover {
+  background-color: orange;
+  color: black;
+  transform: scale(1.2);
+  z-index: 4;
+}
+
+#card-1 {
+  transform: rotate(-15deg) translate(30px, 50px);
+  z-index: 1;
+}
+
+#card-2 {
+  z-index: 2;
+}
+
+#card-3 {
+  transform: rotate(15deg) translate(-30px, 50px);
+  z-index: 3;
+}

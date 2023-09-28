@@ -78,4 +78,5 @@ button {
 
 .moving {
   animation: moving 1.5s ease-out 0s 1 forwards;
+  /* con forwards stabiliamo che alla fine dell'animazione gli stili rimangano applicati all'elemento */
 }
