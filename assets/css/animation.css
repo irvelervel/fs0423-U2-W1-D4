@@ -1,0 +1,81 @@
+.box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+@keyframes firstAnimation {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(300px, 0px) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@keyframes enlargeBox {
+  0% {
+    transform: scaleX(1);
+    background-color: darkolivegreen;
+  }
+  45% {
+    transform: scaleX(3);
+    background-color: pink;
+  }
+  50% {
+    transform: scaleX(7);
+    background-color: red;
+  }
+  100% {
+    transform: scaleX(1);
+    background-color: darkolivegreen;
+  }
+}
+
+.animated-1 {
+  background-color: aqua;
+  /* animation: name duration timing-function delay iteration-count */
+  animation: firstAnimation 6s linear 0s infinite;
+}
+
+.animated-2 {
+  background-color: darkolivegreen;
+  color: white;
+  transform-origin: 0% 50%; /* normalmente sarebbe 50% 50% */
+  animation: enlargeBox 4s linear 0s 1;
+}
+
+.animated-2 p {
+  text-align: center;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+.animated-3 {
+  background-color: black;
+  color: white;
+}
+
+button {
+  margin-top: 0.5em;
+}
+
+.moving {
+  animation: moving 1.5s ease-out 0s 1 forwards;
+}
