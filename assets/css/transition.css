@@ -1,6 +1,7 @@
 .rect {
   width: 200px;
   height: 150px;
+  margin-top: 2em;
 }
 
 .rect-1 {
@@ -9,9 +10,27 @@
   /* le transition si applicano allo stato "normale" dell'elemento, non nel pseudo selettore hover */
   /* si applicano con una proprietà CSS che si chiama "transition" (in realtà è una scorciatoia) */
   /* transition: property duration timing-function delay */
-  transition: width 2s linear 0s;
+  transition: width 2s linear 1s;
 }
 
 .rect-1:hover {
   width: 500px;
+}
+
+.rect-2 {
+  background-color: pink;
+  transition: background-color 3s ease-in;
+}
+
+.rect-2:hover {
+  background-color: greenyellow;
+}
+
+.rect-3 {
+  background-color: red;
+  transition: transform 2s cubic-bezier(1, 0, 0.96, 0.67);
+}
+
+.rect-3:hover {
+  transform: rotate(500deg);
 }
